@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-playground',
@@ -8,15 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PlaygroundComponent implements OnInit {
   @Input() counter: number;
 
+  @Output() increment = new EventEmitter();
+  @Output() decrement = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
 
   incrementClickHandler() {
-    console.log('Increment');
+    this.increment.emit();
   }
 
   decrementClickHandler() {
-    console.log('Decrement');
+    this.decrement.emit();
   }
 }
