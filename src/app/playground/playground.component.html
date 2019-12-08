@@ -5,10 +5,20 @@
       You can play around with increment and decrement!
     </p>
     <hr />
-    <button class="btn btn-primary mr-4" (click)="incrementClickHandler()">
+
+    <!-- More on equality check in JavaScript: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness -->
+    <button
+      class="btn btn-primary mr-4"
+      (click)="incrementClickHandler()"
+      [disabled]="counter === 20"
+    >
       Increment
     </button>
-    <button class="btn btn-danger" (click)="decrementClickHandler()">
+    <button
+      class="btn btn-danger"
+      (click)="decrementClickHandler()"
+      [disabled]="counter === 0"
+    >
       Decrement
     </button>
   </div>
