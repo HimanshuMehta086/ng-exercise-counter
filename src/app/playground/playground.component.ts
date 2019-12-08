@@ -11,4 +11,12 @@ export class PlaygroundComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  incrementClickHandler() {
+    console.log('Increment');
+  }
+
+  decrementClickHandler() {
+    console.log('Decrement');
+  }
 }
