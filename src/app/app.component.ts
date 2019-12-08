@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   counter = 0;
+
+  incrementHandler() {
+    this.counter++;
+  }
+
+  decrementHandler() {
+    this.counter--;
+  }
 }
