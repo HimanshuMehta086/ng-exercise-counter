@@ -9,10 +9,18 @@ export class AppComponent {
   counter = 0;
 
   incrementHandler() {
-    this.counter++;
+    if (this.counter < 20) {
+      this.counter++;
+    } else {
+      console.log('Increment limit breach');
+    }
   }
 
   decrementHandler() {
-    this.counter--;
+    if (this.counter > 0) {
+      this.counter--;
+    } else {
+      console.log('Decrement limit breach');
+    }
   }
 }
